@@ -1,0 +1,25 @@
+{
+  "name": "rippling-paystub-parser",
+  "version": "1.0.0",
+  "description": "Parse Rippling paystub PDFs and extract detailed payroll data",
+  "main": "parse-paystubs.js",
+  "type": "module",
+  "scripts": {
+    "parse": "node parse-paystubs.js",
+    "parse:ytd": "node parse-paystubs.js --range=ytd",
+    "parse:month": "node parse-paystubs.js --range=month",
+    "build": "node build-plotly.js",
+    "render": "node render-plotly.js",
+    "render:open": "node render-plotly.js --open",
+    "sankey": "npm run parse && npm run build && npm run render",
+    "sankey:open": "npm run parse && npm run build && npm run render:open",
+    "sankey:ytd": "npm run parse:ytd && npm run build && npm run render",
+    "sankey:ytd:open": "npm run parse:ytd && npm run build && npm run render:open"
+  },
+  "keywords": ["rippling", "paystub", "pdf", "parser"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "pdf-parse": "^1.1.1"
+  }
+}
