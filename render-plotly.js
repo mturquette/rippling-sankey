@@ -237,6 +237,7 @@ function generateHTML(data, dateRange) {
         target: ${JSON.stringify(data.links.map(l => l.target))},
         value: ${JSON.stringify(data.links.map(l => l.value))},
         color: ${JSON.stringify(data.links.map(l => l.color))},
+        arrowlen: 15,
         hovertemplate: '%{source.label} → %{target.label}<br>Amount: $%{value:,.2f}<extra></extra>'
       }
     }];
